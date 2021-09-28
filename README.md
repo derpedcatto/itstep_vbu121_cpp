@@ -3,6 +3,7 @@
 #### this is my first github repo, stuff will be messy, but it's only for personal use
 
 ## tasks from itstep
+###i imported only the most interesting tasks that i have finished, not all of them
 
 - loops1 - homework5
 - loops2 - homework6
