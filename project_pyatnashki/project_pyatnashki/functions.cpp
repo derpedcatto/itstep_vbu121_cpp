@@ -1,11 +1,11 @@
 #include <iostream>
 #include <windows.h>
-#include <conio.h>		//При нажатии кнопки
+#include <conio.h>		//РџСЂРё РЅР°Р¶Р°С‚РёРё РєРЅРѕРїРєРё
 #include <time.h>
 #include "functions.h"
 using namespace std;
 
-//Глобальные переменные
+//Р“Р»РѕР±Р°Р»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ
 
 enum dir { DOWN = 80, UP = 72, LEFT = 75, RIGHT = 77 };
 int emptyY = 3;
@@ -52,7 +52,7 @@ void draw_board(int board[4][4])
 	COORD first_draw;
 	first_draw.X = 0;
 	first_draw.Y = 0;
-	int y_default = -1;		//новое default значение при спуске на след. ряд
+	int y_default = -1;		//РЅРѕРІРѕРµ default Р·РЅР°С‡РµРЅРёРµ РїСЂРё СЃРїСѓСЃРєРµ РЅР° СЃР»РµРґ. СЂСЏРґ
 	int y_offset = -1;
 
 	for (int i = 0; i < 4; i++)
@@ -102,7 +102,7 @@ int get_input()
 
 int random_input()
 {
-	//Рандом
+	//Р Р°РЅРґРѕРј
 	srand(time(0));
 	rand();
 	int arr[4];
@@ -117,7 +117,7 @@ int random_input()
 	if (rand_num > 4)
 		rand_num = 0;
 
-	//Возвращение значения клавиши
+	//Р’РѕР·РІСЂР°С‰РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РєР»Р°РІРёС€Рё
 	switch (direct)
 	{
 		case 0:
@@ -152,7 +152,7 @@ int movement(int board[4][4])
 	offsetX = 0;
 	offsetY = 0;
 
-	//Направление
+	//РќР°РїСЂР°РІР»РµРЅРёРµ
 	switch (direct)
 	{
 		case DOWN:
@@ -177,7 +177,7 @@ int movement(int board[4][4])
 		}
 	}
 
-	//Проверка на выход за пределы
+	//РџСЂРѕРІРµСЂРєР° РЅР° РІС‹С…РѕРґ Р·Р° РїСЂРµРґРµР»С‹
 	if ((board[emptyY][emptyX] == board[emptyY][3] && offsetX == 1) ||
 		(board[emptyY][emptyX] == board[emptyY][0] && offsetX == -1) ||
 		(board[emptyY][emptyX] == board[3][emptyX] && offsetY == 1) ||
@@ -187,7 +187,7 @@ int movement(int board[4][4])
 
 	if (offsetX)
 	{
-		//Замена значений
+		//Р—Р°РјРµРЅР° Р·РЅР°С‡РµРЅРёР№
 		int temp = board[emptyY][emptyX];
 		board[emptyY][emptyX] = board[emptyY][emptyX + offsetX];
 		board[emptyY][emptyX + offsetX] = temp;
@@ -198,7 +198,7 @@ int movement(int board[4][4])
 
 	if (offsetY)
 	{
-		//Замена значений
+		//Р—Р°РјРµРЅР° Р·РЅР°С‡РµРЅРёР№
 		int temp = board[emptyY][emptyX];
 		board[emptyY][emptyX] = board[emptyY + offsetY][emptyX];
 		board[emptyY + offsetY][emptyX] = temp;
@@ -214,7 +214,7 @@ void board_anim(int offsetX, int offsetY, int board[4][4])
 
 	if (offsetX)
 	{
-		//Влево
+		//Р’Р»РµРІРѕ
 		if (offsetX == 1)
 			{
 				int def_offset_x = 0;
@@ -272,7 +272,7 @@ void board_anim(int offsetX, int offsetY, int board[4][4])
 				}
 			}
 
-		//Вправо
+		//Р’РїСЂР°РІРѕ
 		if (offsetX == -1)
 			{
 				int def_offset_x = -1;
@@ -326,7 +326,7 @@ void board_anim(int offsetX, int offsetY, int board[4][4])
 
 	if (offsetY)
 	{
-		//Вверх
+		//Р’РІРµСЂС…
 		if (offsetY == 1)
 			{
 				int def_offset_x = 0;
@@ -383,7 +383,7 @@ void board_anim(int offsetX, int offsetY, int board[4][4])
 				}
 			}
 
-		//Вниз
+		//Р’РЅРёР·
 		if (offsetY == -1)
 			{
 				int def_offset_x = 0;
