@@ -15,7 +15,7 @@ int main()
 	cout << "    Randomize num\n    -> ";
 	cin >> random_count;
 
-	//Меню загрузки
+	//РњРµРЅСЋ Р·Р°РіСЂСѓР·РєРё
 	system("cls");
 	cursor_coord(3, 5);
 	hide_cursor();
