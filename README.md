@@ -5,10 +5,6 @@
 ## tasks from itstep
 #### i imported only the most interesting tasks that i have finished, not all of them
 
-- loops1 - homework5
-- loops2 - homework6
-- arrays1 - homework7
-- arrays2 - homework8
 
 ## projects
 
