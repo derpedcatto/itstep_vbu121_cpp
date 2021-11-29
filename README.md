@@ -17,3 +17,6 @@
 
 - project_maze: finished
   - alot of stuff is left undone because of time constraints, including some bugs
+
+- project_binaryland: finished
+  -  no moving enemies and additional features
